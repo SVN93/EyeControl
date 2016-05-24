@@ -1,0 +1,460 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A561B1641CF319DA00E6CB9B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A561B1631CF319DA00E6CB9B /* AppDelegate.m */; };
+		A561B1671CF319DA00E6CB9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A561B1661CF319DA00E6CB9B /* main.m */; };
+		A561B16A1CF319DA00E6CB9B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A561B1691CF319DA00E6CB9B /* ViewController.m */; };
+		A561B16C1CF319DA00E6CB9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A561B16B1CF319DA00E6CB9B /* Assets.xcassets */; };
+		A561B16F1CF319DA00E6CB9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A561B16D1CF319DA00E6CB9B /* Main.storyboard */; };
+		A561B19B1CF360FC00E6CB9B /* findEyeCenter.mm in Sources */ = {isa = PBXBuildFile; fileRef = A561B1941CF360FC00E6CB9B /* findEyeCenter.mm */; };
+		A561B19C1CF360FC00E6CB9B /* findEyeCorner.mm in Sources */ = {isa = PBXBuildFile; fileRef = A561B1961CF360FC00E6CB9B /* findEyeCorner.mm */; };
+		A561B19D1CF360FC00E6CB9B /* helpers.mm in Sources */ = {isa = PBXBuildFile; fileRef = A561B1981CF360FC00E6CB9B /* helpers.mm */; };
+		A561B1A21CF367FE00E6CB9B /* AlgoWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = A561B1A01CF367FE00E6CB9B /* AlgoWrapper.mm */; };
+		A561B1A51CF36DEE00E6CB9B /* AlgoSingleton.mm in Sources */ = {isa = PBXBuildFile; fileRef = A561B1A41CF36DEE00E6CB9B /* AlgoSingleton.mm */; };
+		A561B1B81CF3741300E6CB9B /* haarcascade_eye.xml in Resources */ = {isa = PBXBuildFile; fileRef = A561B1A71CF3741300E6CB9B /* haarcascade_eye.xml */; };
+		A561B1B91CF3741300E6CB9B /* haarcascade_eye_tree_eyeglasses.xml in Resources */ = {isa = PBXBuildFile; fileRef = A561B1A81CF3741300E6CB9B /* haarcascade_eye_tree_eyeglasses.xml */; };
+		A561B1BA1CF3741300E6CB9B /* haarcascade_frontalcatface.xml in Resources */ = {isa = PBXBuildFile; fileRef = A561B1A91CF3741300E6CB9B /* haarcascade_frontalcatface.xml */; };
+		A561B1BB1CF3741300E6CB9B /* haarcascade_frontalcatface_extended.xml in Resources */ = {isa = PBXBuildFile; fileRef = A561B1AA1CF3741300E6CB9B /* haarcascade_frontalcatface_extended.xml */; };
+		A561B1BC1CF3741300E6CB9B /* haarcascade_frontalface_alt.xml in Resources */ = {isa = PBXBuildFile; fileRef = A561B1AB1CF3741300E6CB9B /* haarcascade_frontalface_alt.xml */; };
+		A561B1BD1CF3741300E6CB9B /* haarcascade_frontalface_alt2.xml in Resources */ = {isa = PBXBuildFile; fileRef = A561B1AC1CF3741300E6CB9B /* haarcascade_frontalface_alt2.xml */; };
+		A561B1BE1CF3741300E6CB9B /* haarcascade_frontalface_alt_tree.xml in Resources */ = {isa = PBXBuildFile; fileRef = A561B1AD1CF3741300E6CB9B /* haarcascade_frontalface_alt_tree.xml */; };
+		A561B1BF1CF3741300E6CB9B /* haarcascade_frontalface_default.xml in Resources */ = {isa = PBXBuildFile; fileRef = A561B1AE1CF3741300E6CB9B /* haarcascade_frontalface_default.xml */; };
+		A561B1C01CF3741300E6CB9B /* haarcascade_fullbody.xml in Resources */ = {isa = PBXBuildFile; fileRef = A561B1AF1CF3741300E6CB9B /* haarcascade_fullbody.xml */; };
+		A561B1C11CF3741300E6CB9B /* haarcascade_lefteye_2splits.xml in Resources */ = {isa = PBXBuildFile; fileRef = A561B1B01CF3741300E6CB9B /* haarcascade_lefteye_2splits.xml */; };
+		A561B1C21CF3741300E6CB9B /* haarcascade_licence_plate_rus_16stages.xml in Resources */ = {isa = PBXBuildFile; fileRef = A561B1B11CF3741300E6CB9B /* haarcascade_licence_plate_rus_16stages.xml */; };
+		A561B1C31CF3741300E6CB9B /* haarcascade_lowerbody.xml in Resources */ = {isa = PBXBuildFile; fileRef = A561B1B21CF3741300E6CB9B /* haarcascade_lowerbody.xml */; };
+		A561B1C41CF3741300E6CB9B /* haarcascade_profileface.xml in Resources */ = {isa = PBXBuildFile; fileRef = A561B1B31CF3741300E6CB9B /* haarcascade_profileface.xml */; };
+		A561B1C51CF3741300E6CB9B /* haarcascade_righteye_2splits.xml in Resources */ = {isa = PBXBuildFile; fileRef = A561B1B41CF3741300E6CB9B /* haarcascade_righteye_2splits.xml */; };
+		A561B1C61CF3741300E6CB9B /* haarcascade_russian_plate_number.xml in Resources */ = {isa = PBXBuildFile; fileRef = A561B1B51CF3741300E6CB9B /* haarcascade_russian_plate_number.xml */; };
+		A561B1C71CF3741300E6CB9B /* haarcascade_smile.xml in Resources */ = {isa = PBXBuildFile; fileRef = A561B1B61CF3741300E6CB9B /* haarcascade_smile.xml */; };
+		A561B1C81CF3741300E6CB9B /* haarcascade_upperbody.xml in Resources */ = {isa = PBXBuildFile; fileRef = A561B1B71CF3741300E6CB9B /* haarcascade_upperbody.xml */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A561B15F1CF319DA00E6CB9B /* EyeControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EyeControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A561B1621CF319DA00E6CB9B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A561B1631CF319DA00E6CB9B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A561B1661CF319DA00E6CB9B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A561B1681CF319DA00E6CB9B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A561B1691CF319DA00E6CB9B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A561B16B1CF319DA00E6CB9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A561B16E1CF319DA00E6CB9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A561B1701CF319DA00E6CB9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A561B1931CF360FC00E6CB9B /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
+		A561B1941CF360FC00E6CB9B /* findEyeCenter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = findEyeCenter.mm; sourceTree = "<group>"; };
+		A561B1951CF360FC00E6CB9B /* findEyeCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = findEyeCenter.h; sourceTree = "<group>"; };
+		A561B1961CF360FC00E6CB9B /* findEyeCorner.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = findEyeCorner.mm; sourceTree = "<group>"; };
+		A561B1971CF360FC00E6CB9B /* findEyeCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = findEyeCorner.h; sourceTree = "<group>"; };
+		A561B1981CF360FC00E6CB9B /* helpers.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = helpers.mm; sourceTree = "<group>"; };
+		A561B1991CF360FC00E6CB9B /* helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = helpers.h; sourceTree = "<group>"; };
+		A561B1A01CF367FE00E6CB9B /* AlgoWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AlgoWrapper.mm; sourceTree = "<group>"; };
+		A561B1A11CF367FE00E6CB9B /* AlgoWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlgoWrapper.h; sourceTree = "<group>"; };
+		A561B1A31CF36DEE00E6CB9B /* AlgoSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlgoSingleton.h; sourceTree = "<group>"; };
+		A561B1A41CF36DEE00E6CB9B /* AlgoSingleton.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AlgoSingleton.mm; sourceTree = "<group>"; };
+		A561B1A71CF3741300E6CB9B /* haarcascade_eye.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_eye.xml; sourceTree = "<group>"; };
+		A561B1A81CF3741300E6CB9B /* haarcascade_eye_tree_eyeglasses.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_eye_tree_eyeglasses.xml; sourceTree = "<group>"; };
+		A561B1A91CF3741300E6CB9B /* haarcascade_frontalcatface.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalcatface.xml; sourceTree = "<group>"; };
+		A561B1AA1CF3741300E6CB9B /* haarcascade_frontalcatface_extended.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalcatface_extended.xml; sourceTree = "<group>"; };
+		A561B1AB1CF3741300E6CB9B /* haarcascade_frontalface_alt.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt.xml; sourceTree = "<group>"; };
+		A561B1AC1CF3741300E6CB9B /* haarcascade_frontalface_alt2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt2.xml; sourceTree = "<group>"; };
+		A561B1AD1CF3741300E6CB9B /* haarcascade_frontalface_alt_tree.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt_tree.xml; sourceTree = "<group>"; };
+		A561B1AE1CF3741300E6CB9B /* haarcascade_frontalface_default.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_default.xml; sourceTree = "<group>"; };
+		A561B1AF1CF3741300E6CB9B /* haarcascade_fullbody.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_fullbody.xml; sourceTree = "<group>"; };
+		A561B1B01CF3741300E6CB9B /* haarcascade_lefteye_2splits.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_lefteye_2splits.xml; sourceTree = "<group>"; };
+		A561B1B11CF3741300E6CB9B /* haarcascade_licence_plate_rus_16stages.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_licence_plate_rus_16stages.xml; sourceTree = "<group>"; };
+		A561B1B21CF3741300E6CB9B /* haarcascade_lowerbody.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_lowerbody.xml; sourceTree = "<group>"; };
+		A561B1B31CF3741300E6CB9B /* haarcascade_profileface.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_profileface.xml; sourceTree = "<group>"; };
+		A561B1B41CF3741300E6CB9B /* haarcascade_righteye_2splits.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_righteye_2splits.xml; sourceTree = "<group>"; };
+		A561B1B51CF3741300E6CB9B /* haarcascade_russian_plate_number.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_russian_plate_number.xml; sourceTree = "<group>"; };
+		A561B1B61CF3741300E6CB9B /* haarcascade_smile.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_smile.xml; sourceTree = "<group>"; };
+		A561B1B71CF3741300E6CB9B /* haarcascade_upperbody.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_upperbody.xml; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A561B15C1CF319DA00E6CB9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A561B1561CF319DA00E6CB9B = {
+			isa = PBXGroup;
+			children = (
+				A561B1611CF319DA00E6CB9B /* EyeControl */,
+				A561B1601CF319DA00E6CB9B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A561B1601CF319DA00E6CB9B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A561B15F1CF319DA00E6CB9B /* EyeControl.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A561B1611CF319DA00E6CB9B /* EyeControl */ = {
+			isa = PBXGroup;
+			children = (
+				A561B1A61CF3741300E6CB9B /* Cascades */,
+				A561B1A31CF36DEE00E6CB9B /* AlgoSingleton.h */,
+				A561B1A41CF36DEE00E6CB9B /* AlgoSingleton.mm */,
+				A561B1A01CF367FE00E6CB9B /* AlgoWrapper.mm */,
+				A561B1A11CF367FE00E6CB9B /* AlgoWrapper.h */,
+				A561B1921CF360FC00E6CB9B /* Algo */,
+				A561B1621CF319DA00E6CB9B /* AppDelegate.h */,
+				A561B1631CF319DA00E6CB9B /* AppDelegate.m */,
+				A561B1681CF319DA00E6CB9B /* ViewController.h */,
+				A561B1691CF319DA00E6CB9B /* ViewController.m */,
+				A561B16B1CF319DA00E6CB9B /* Assets.xcassets */,
+				A561B16D1CF319DA00E6CB9B /* Main.storyboard */,
+				A561B1701CF319DA00E6CB9B /* Info.plist */,
+				A561B1651CF319DA00E6CB9B /* Supporting Files */,
+			);
+			path = EyeControl;
+			sourceTree = "<group>";
+		};
+		A561B1651CF319DA00E6CB9B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A561B1661CF319DA00E6CB9B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A561B1921CF360FC00E6CB9B /* Algo */ = {
+			isa = PBXGroup;
+			children = (
+				A561B1931CF360FC00E6CB9B /* constants.h */,
+				A561B1941CF360FC00E6CB9B /* findEyeCenter.mm */,
+				A561B1951CF360FC00E6CB9B /* findEyeCenter.h */,
+				A561B1961CF360FC00E6CB9B /* findEyeCorner.mm */,
+				A561B1971CF360FC00E6CB9B /* findEyeCorner.h */,
+				A561B1981CF360FC00E6CB9B /* helpers.mm */,
+				A561B1991CF360FC00E6CB9B /* helpers.h */,
+			);
+			path = Algo;
+			sourceTree = "<group>";
+		};
+		A561B1A61CF3741300E6CB9B /* Cascades */ = {
+			isa = PBXGroup;
+			children = (
+				A561B1A71CF3741300E6CB9B /* haarcascade_eye.xml */,
+				A561B1A81CF3741300E6CB9B /* haarcascade_eye_tree_eyeglasses.xml */,
+				A561B1A91CF3741300E6CB9B /* haarcascade_frontalcatface.xml */,
+				A561B1AA1CF3741300E6CB9B /* haarcascade_frontalcatface_extended.xml */,
+				A561B1AB1CF3741300E6CB9B /* haarcascade_frontalface_alt.xml */,
+				A561B1AC1CF3741300E6CB9B /* haarcascade_frontalface_alt2.xml */,
+				A561B1AD1CF3741300E6CB9B /* haarcascade_frontalface_alt_tree.xml */,
+				A561B1AE1CF3741300E6CB9B /* haarcascade_frontalface_default.xml */,
+				A561B1AF1CF3741300E6CB9B /* haarcascade_fullbody.xml */,
+				A561B1B01CF3741300E6CB9B /* haarcascade_lefteye_2splits.xml */,
+				A561B1B11CF3741300E6CB9B /* haarcascade_licence_plate_rus_16stages.xml */,
+				A561B1B21CF3741300E6CB9B /* haarcascade_lowerbody.xml */,
+				A561B1B31CF3741300E6CB9B /* haarcascade_profileface.xml */,
+				A561B1B41CF3741300E6CB9B /* haarcascade_righteye_2splits.xml */,
+				A561B1B51CF3741300E6CB9B /* haarcascade_russian_plate_number.xml */,
+				A561B1B61CF3741300E6CB9B /* haarcascade_smile.xml */,
+				A561B1B71CF3741300E6CB9B /* haarcascade_upperbody.xml */,
+			);
+			path = Cascades;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A561B15E1CF319DA00E6CB9B /* EyeControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A561B1731CF319DA00E6CB9B /* Build configuration list for PBXNativeTarget "EyeControl" */;
+			buildPhases = (
+				A561B15B1CF319DA00E6CB9B /* Sources */,
+				A561B15C1CF319DA00E6CB9B /* Frameworks */,
+				A561B15D1CF319DA00E6CB9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EyeControl;
+			productName = EyeControl;
+			productReference = A561B15F1CF319DA00E6CB9B /* EyeControl.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A561B1571CF319DA00E6CB9B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Sergey Korneev";
+				TargetAttributes = {
+					A561B15E1CF319DA00E6CB9B = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = A561B15A1CF319DA00E6CB9B /* Build configuration list for PBXProject "EyeControl" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A561B1561CF319DA00E6CB9B;
+			productRefGroup = A561B1601CF319DA00E6CB9B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A561B15E1CF319DA00E6CB9B /* EyeControl */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A561B15D1CF319DA00E6CB9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A561B1C31CF3741300E6CB9B /* haarcascade_lowerbody.xml in Resources */,
+				A561B1C41CF3741300E6CB9B /* haarcascade_profileface.xml in Resources */,
+				A561B1BE1CF3741300E6CB9B /* haarcascade_frontalface_alt_tree.xml in Resources */,
+				A561B16C1CF319DA00E6CB9B /* Assets.xcassets in Resources */,
+				A561B1C61CF3741300E6CB9B /* haarcascade_russian_plate_number.xml in Resources */,
+				A561B1B81CF3741300E6CB9B /* haarcascade_eye.xml in Resources */,
+				A561B1C11CF3741300E6CB9B /* haarcascade_lefteye_2splits.xml in Resources */,
+				A561B1C21CF3741300E6CB9B /* haarcascade_licence_plate_rus_16stages.xml in Resources */,
+				A561B1BD1CF3741300E6CB9B /* haarcascade_frontalface_alt2.xml in Resources */,
+				A561B1BB1CF3741300E6CB9B /* haarcascade_frontalcatface_extended.xml in Resources */,
+				A561B1BA1CF3741300E6CB9B /* haarcascade_frontalcatface.xml in Resources */,
+				A561B16F1CF319DA00E6CB9B /* Main.storyboard in Resources */,
+				A561B1BC1CF3741300E6CB9B /* haarcascade_frontalface_alt.xml in Resources */,
+				A561B1C81CF3741300E6CB9B /* haarcascade_upperbody.xml in Resources */,
+				A561B1C01CF3741300E6CB9B /* haarcascade_fullbody.xml in Resources */,
+				A561B1BF1CF3741300E6CB9B /* haarcascade_frontalface_default.xml in Resources */,
+				A561B1C51CF3741300E6CB9B /* haarcascade_righteye_2splits.xml in Resources */,
+				A561B1B91CF3741300E6CB9B /* haarcascade_eye_tree_eyeglasses.xml in Resources */,
+				A561B1C71CF3741300E6CB9B /* haarcascade_smile.xml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A561B15B1CF319DA00E6CB9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A561B16A1CF319DA00E6CB9B /* ViewController.m in Sources */,
+				A561B1A51CF36DEE00E6CB9B /* AlgoSingleton.mm in Sources */,
+				A561B19D1CF360FC00E6CB9B /* helpers.mm in Sources */,
+				A561B19C1CF360FC00E6CB9B /* findEyeCorner.mm in Sources */,
+				A561B1A21CF367FE00E6CB9B /* AlgoWrapper.mm in Sources */,
+				A561B1671CF319DA00E6CB9B /* main.m in Sources */,
+				A561B1641CF319DA00E6CB9B /* AppDelegate.m in Sources */,
+				A561B19B1CF360FC00E6CB9B /* findEyeCenter.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A561B16D1CF319DA00E6CB9B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A561B16E1CF319DA00E6CB9B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A561B1711CF319DA00E6CB9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A561B1721CF319DA00E6CB9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A561B1741CF319DA00E6CB9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/include/opencv,
+				);
+				INFOPLIST_FILE = EyeControl/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					/usr/local/lib/libopencv_videostab.3.1.0.dylib,
+					/usr/local/lib/libopencv_superres.3.1.0.dylib,
+					/usr/local/lib/libopencv_stitching.3.1.0.dylib,
+					/usr/local/lib/libopencv_shape.3.1.0.dylib,
+					/usr/local/lib/libopencv_photo.3.1.0.dylib,
+					/usr/local/lib/libopencv_objdetect.3.1.0.dylib,
+					/usr/local/lib/libopencv_calib3d.3.1.0.dylib,
+					/usr/local/lib/libopencv_features2d.3.1.0.dylib,
+					/usr/local/lib/libopencv_ml.3.1.0.dylib,
+					/usr/local/lib/libopencv_highgui.3.1.0.dylib,
+					/usr/local/lib/libopencv_core.3.1.0.dylib,
+					/usr/local/lib/libopencv_imgproc.3.1.0.dylib,
+					/usr/local/lib/libopencv_video.3.1.0.dylib,
+					/usr/local/lib/libopencv_flann.3.1.0.dylib,
+					/usr/local/lib/libopencv_imgcodecs.3.1.0.dylib,
+					/usr/local/lib/libopencv_videoio.3.1.0.dylib,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.sk.EyeControl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A561B1751CF319DA00E6CB9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/include/opencv,
+				);
+				INFOPLIST_FILE = EyeControl/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					/usr/local/lib/libopencv_videostab.3.1.0.dylib,
+					/usr/local/lib/libopencv_superres.3.1.0.dylib,
+					/usr/local/lib/libopencv_stitching.3.1.0.dylib,
+					/usr/local/lib/libopencv_shape.3.1.0.dylib,
+					/usr/local/lib/libopencv_photo.3.1.0.dylib,
+					/usr/local/lib/libopencv_objdetect.3.1.0.dylib,
+					/usr/local/lib/libopencv_calib3d.3.1.0.dylib,
+					/usr/local/lib/libopencv_features2d.3.1.0.dylib,
+					/usr/local/lib/libopencv_ml.3.1.0.dylib,
+					/usr/local/lib/libopencv_highgui.3.1.0.dylib,
+					/usr/local/lib/libopencv_core.3.1.0.dylib,
+					/usr/local/lib/libopencv_imgproc.3.1.0.dylib,
+					/usr/local/lib/libopencv_video.3.1.0.dylib,
+					/usr/local/lib/libopencv_flann.3.1.0.dylib,
+					/usr/local/lib/libopencv_imgcodecs.3.1.0.dylib,
+					/usr/local/lib/libopencv_videoio.3.1.0.dylib,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.sk.EyeControl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A561B15A1CF319DA00E6CB9B /* Build configuration list for PBXProject "EyeControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A561B1711CF319DA00E6CB9B /* Debug */,
+				A561B1721CF319DA00E6CB9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A561B1731CF319DA00E6CB9B /* Build configuration list for PBXNativeTarget "EyeControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A561B1741CF319DA00E6CB9B /* Debug */,
+				A561B1751CF319DA00E6CB9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A561B1571CF319DA00E6CB9B /* Project object */;
+}
