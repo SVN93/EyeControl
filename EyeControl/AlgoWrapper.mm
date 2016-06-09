@@ -57,10 +57,7 @@ int mainn() {
     cv::moveWindow("Right Eye", 10, 600);
     cv::namedWindow("Left Eye",CV_WINDOW_NORMAL);
     cv::moveWindow("Left Eye", 10, 800);
-    cv::namedWindow("aa",CV_WINDOW_NORMAL);
-    cv::moveWindow("aa", 10, 800);
-    cv::namedWindow("aaa",CV_WINDOW_NORMAL);
-    cv::moveWindow("aaa", 10, 800);
+
     
     createCornerKernels();
     ellipse(skinCrCbHist, cv::Point(113, 155.6), cv::Size(23.4, 15.2),
@@ -88,7 +85,7 @@ int mainn() {
             
             imshow(main_window_name,debugImage);
             
-            int c = cv::waitKey(10);
+            int c = cv::waitKey(100);
             if( (char)c == 'c' ) { break; }
             if( (char)c == 'f' ) {
                 imwrite("frame.png",frame);
@@ -151,11 +148,23 @@ void findEyes(cv::Mat frame_gray, cv::Rect face) {
     rectangle(debugFace,rightLeftCornerRegion,200);
     rectangle(debugFace,rightRightCornerRegion,200);
     
-    // change eye centers to face coordinates
     rightPupil.x += rightEyeRegion.x;
     rightPupil.y += rightEyeRegion.y;
     leftPupil.x += leftEyeRegion.x;
     leftPupil.y += leftEyeRegion.y;
+    
+    cv::line(debugFace, cv::Point(rightPupil.x - 8, rightPupil.y - 8), cv::Point(rightPupil.x + 8, rightPupil.y + 8), 1488);
+    cv::line(debugFace, cv::Point(rightPupil.x - 8, rightPupil.y + 8), cv::Point(rightPupil.x + 8, rightPupil.y - 8), 1488);
+    
+    cv::line(debugFace, cv::Point(leftPupil.x - 8, leftPupil.y - 8), cv::Point(leftPupil.x + 8, leftPupil.y + 8), 1488);
+    cv::line(debugFace, cv::Point(leftPupil.x - 8, leftPupil.y + 8), cv::Point(leftPupil.x + 8, leftPupil.y - 8), 1488);
+
+    
+    // change eye centers to face coordinates
+    rightPupil.x += face.x;
+    rightPupil.y += face.y;
+    leftPupil.x += face.x;
+    leftPupil.y += face.y;
     
     AlgoSingleton *singleton = [AlgoSingleton sharedAPI];
     //[singleton setNewPoint:NSMakePoint(leftPupil.x + face.x, leftPupil.y + face.y)];
@@ -166,11 +175,6 @@ void findEyes(cv::Mat frame_gray, cv::Rect face) {
     //printf("Left Eye X: %f, Eye Y: %f\n", leftPupil.x, leftPupil.y);
     //printf("Right Eye X: %f, Eye Y: %f\n", rightPupil.x, rightPupil.y);
     
-    cv::line(debugFace, cv::Point(rightPupil.x - 8, rightPupil.y - 8), cv::Point(rightPupil.x + 8, rightPupil.y + 8), 1488);
-    cv::line(debugFace, cv::Point(rightPupil.x - 8, rightPupil.y + 8), cv::Point(rightPupil.x + 8, rightPupil.y - 8), 1488);
-    
-    cv::line(debugFace, cv::Point(leftPupil.x - 8, leftPupil.y - 8), cv::Point(leftPupil.x + 8, leftPupil.y + 8), 1488);
-    cv::line(debugFace, cv::Point(leftPupil.x - 8, leftPupil.y + 8), cv::Point(leftPupil.x + 8, leftPupil.y - 8), 1488);
     
     //-- Find Eye Corners
     if (kEnableEyeCorner) {
