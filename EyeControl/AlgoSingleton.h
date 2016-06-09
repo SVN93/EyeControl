@@ -10,7 +10,7 @@
 
 @protocol AlgoDelegate <NSObject>
 
-- (void)newPoint:(NSPoint)point withRegion:(CGRect)region;
+- (void)newPoint:(NSPoint)point;
 
 @end
 
@@ -22,6 +22,6 @@
 
 - (void)startCapturing;
 
-- (void)setNewPoint:(NSPoint)point withRegion:(CGRect)region;
+- (void)setNewPoint:(NSPoint)point;
 
 @end

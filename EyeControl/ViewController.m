@@ -75,7 +75,7 @@
     self.cursorPoint = NSMakePoint(self.cursorPoint.x + 1, self.cursorPoint.y + 1);
 }
 
-- (void)newPoint:(NSPoint)point withRegion:(CGRect)region
+- (void)newPoint:(NSPoint)point
 {
     //NSLog(@"size: %@",NSStringFromRect([NSScreen mainScreen].frame));
     if (self.controlPoint4.x == -100) {
@@ -105,9 +105,9 @@
             }
         }
     } else {
-        self.XKoef = [NSScreen mainScreen].frame.size.width / region.size.width;//(self.controlPoint2.x - self.controlPoint1.x);
-        self.YKoef = [NSScreen mainScreen].frame.size.height / region.size.height;//(self.controlPoint4.y - self.controlPoint1.y);
-        NSPoint convertedPoint = point;//NSMakePoint(point.x - self.controlPoint1.x, point.y - self.controlPoint1.y);
+        self.XKoef = [NSScreen mainScreen].frame.size.width / (self.controlPoint2.x - self.controlPoint1.x);
+        self.YKoef = [NSScreen mainScreen].frame.size.height / (self.controlPoint4.y - self.controlPoint1.y);
+        NSPoint convertedPoint = NSMakePoint(point.x - self.controlPoint1.x, point.y - self.controlPoint1.y);
         convertedPoint = NSMakePoint(convertedPoint.x * self.XKoef, convertedPoint.y * self.YKoef);
         NSLog(@"Native point: %@",NSStringFromPoint(point));
         NSLog(@"Converted point: %@",NSStringFromPoint(convertedPoint));

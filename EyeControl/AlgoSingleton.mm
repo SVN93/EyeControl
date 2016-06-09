@@ -31,9 +31,9 @@
     wrapper->startCapture();
 }
 
-- (void)setNewPoint:(NSPoint)point withRegion:(CGRect)region
+- (void)setNewPoint:(NSPoint)point
 {
-    [self.delegate newPoint:point withRegion:region];
+    [self.delegate newPoint:point];
 }
 
 @end

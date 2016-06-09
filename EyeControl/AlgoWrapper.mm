@@ -168,7 +168,7 @@ void findEyes(cv::Mat frame_gray, cv::Rect face) {
     
     AlgoSingleton *singleton = [AlgoSingleton sharedAPI];
     //[singleton setNewPoint:NSMakePoint(leftPupil.x + face.x, leftPupil.y + face.y)];
-    [singleton setNewPoint:NSMakePoint(leftPupil.x, leftPupil.y) withRegion:CGRectMake(0, 0, leftEyeRegion.width, leftEyeRegion.height)];
+    [singleton setNewPoint:NSMakePoint(leftPupil.x, leftPupil.y)];
     // draw eye centers
     //    circle(debugFace, rightPupil, 3, 1234);
     //    circle(debugFace, leftPupil, 3, 1234);
