@@ -43,6 +43,10 @@
     
     self.controlPoint1 = self.controlPoint2 = self.controlPoint3 = self.controlPoint4 = NSMakePoint(-100, -100);
     self.XKoef = self.YKoef = 1;
+    
+    self.sortArrayX = [[NSMutableArray alloc] initWithCapacity:0];
+    self.sortArrayY = [[NSMutableArray alloc] initWithCapacity:0];
+    self.sortMediumArray = [[NSMutableArray alloc] initWithCapacity:0];
 
     //self.cursorPoint = NSMakePoint(100, 100);
     
@@ -98,7 +102,7 @@
                         //NSLog(@"region: %@",NSStringFromRect(region));
                         self.controlPoint4 = NSMakePoint(self.controlPoint1.x, self.controlPoint3.y);;
                         
-                        //self.controlPoint4 = NSMakePoint(0, self.controlPoint4.y - self.controlPoint1.y);
+                        //self.controlPoint4 = NSMakePoint(0, self.controlPoint4.y - self.controlPoint1.y)
                         //self.controlPoint3 = NSMakePoint(self.controlPoint3.x - self.controlPoint1.x
                                                          //, self.controlPoint3.y - self.controlPoint1.y);
                         //self.controlPoint2 = NSMakePoint(self.controlPoint2.x - self.controlPoint1.x
@@ -114,6 +118,35 @@
         self.YKoef = [NSScreen mainScreen].frame.size.height / (self.controlPoint4.y - self.controlPoint1.y);
         NSPoint convertedPoint = NSMakePoint(point.x - self.controlPoint1.x, point.y - self.controlPoint1.y);
         convertedPoint = NSMakePoint(convertedPoint.x * self.XKoef, convertedPoint.y * self.YKoef);
+        
+        /*if (self.sortArrayX.count == 17) {
+            [self.sortArrayX removeObjectAtIndex:0];
+            [self.sortArrayY removeObjectAtIndex:0];
+            
+            [self.sortArrayX addObject:[NSValue valueWithPoint:convertedPoint]];
+            [self.sortArrayY addObject:[NSValue valueWithPoint:convertedPoint]];
+        } else {
+            [self.sortArrayX addObject:[NSValue valueWithPoint:convertedPoint]];
+            [self.sortArrayY addObject:[NSValue valueWithPoint:convertedPoint]];
+        }
+        if (self.sortArrayX.count == 17) {
+            convertedPoint = [self getSmoothPoint];
+        }*/
+        
+        if (self.sortMediumArray.count == 17) {
+            [self.sortMediumArray removeObjectAtIndex:0];
+            
+        }
+        
+        [self.sortMediumArray addObject:[NSValue valueWithPoint:convertedPoint]];
+        
+        if (self.sortMediumArray.count != 0) {
+            convertedPoint = [self getMediumPoint];
+        }
+        
+        
+        //NSLog(@"%i, %@", self.sortArrayX.count, self.sortArrayX[0]);
+        
         NSLog(@"Native point: %@",NSStringFromPoint(point));
         NSLog(@"Converted point: %@",NSStringFromPoint(convertedPoint));
         //NSPoint newPoint = NSMakePoint(point.x * self.XKoef, point.y * self.YKoef);
@@ -127,6 +160,36 @@
         CGAssociateMouseAndMouseCursorPosition (1);
         //self.cursorPoint = NSMakePoint(self.cursorPoint.x + 1, self.cursorPoint.y + 1);
     }
+}
+
+- (NSPoint)getSmoothPoint
+{
+    [self.sortArrayX sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        CGPoint firstPoint = [obj1 pointValue];
+        CGPoint secondPoint = [obj2 pointValue];
+        return firstPoint.x>secondPoint.x;
+    }];
+    
+    [self.sortArrayY sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        CGPoint firstPoint = [obj1 pointValue];
+        CGPoint secondPoint = [obj2 pointValue];
+        return firstPoint.x>secondPoint.x;
+    }];
+    
+    return NSMakePoint([self.sortArrayX[8] pointValue].x, [self.sortArrayY[8] pointValue].y);
+}
+
+- (NSPoint)getMediumPoint
+{
+    float sumX, sumY;
+    sumX = sumY = 0;
+    
+    for (NSValue *point in self.sortMediumArray) {
+        sumX += [point pointValue].x;
+        sumY += [point pointValue].y;
+    }
+    
+    return NSMakePoint(sumX / self.sortMediumArray.count, sumY / self.sortMediumArray.count);
 }
 
 - (void)mouseDown:(NSEvent *)theEvent {
