@@ -22,6 +22,11 @@
 @property (nonatomic, assign) float XKoef;
 @property (nonatomic, assign) float YKoef;
 
+@property (nonatomic, strong) NSMutableArray *sortArrayX;
+@property (nonatomic, strong) NSMutableArray *sortArrayY;
+
+@property (nonatomic, strong) NSMutableArray *sortMediumArray;
+
 @property (nonatomic, weak) IBOutlet NSButton *button;
 
 

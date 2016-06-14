@@ -674,8 +674,8 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="izM-4z-j2a">
-                                <rect key="frame" x="198" y="118" width="82" height="32"/>
-                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" inset="2" id="nDp-8t-pmU">
+                                <rect key="frame" x="172" y="94" width="137" height="32"/>
+                                <buttonCell key="cell" type="push" title="Записать точку" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" inset="2" id="nDp-8t-pmU">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -683,6 +683,14 @@
                                     <action selector="buttonPushed:" target="XfG-lQ-9wD" id="oCn-Ji-QJg"/>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cte-vg-J4O">
+                                <rect key="frame" x="65" y="157" width="350" height="48"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Посмотрите в правый верхний угол и нажмите кнопку &quot;записать точку&quot;" id="0Sf-mx-n0I">
+                                    <font key="font" metaFont="system" size="20"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
